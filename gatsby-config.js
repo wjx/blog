@@ -130,5 +130,11 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `jessew-xyz`
+      }
+    },
   ],
 }
