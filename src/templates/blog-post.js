@@ -16,7 +16,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     let disqusConfig = {
-      url: `jessew.xyz${this.props.location.pathname}`,
+      url: `https://jessew.xyz${this.props.location.pathname}`,
       identifier: post.id,
       title: post.title,
     }
@@ -71,7 +71,6 @@ class BlogPostTemplate extends React.Component {
           </li>
         </ul>
 
-        <CommentCount config={disqusConfig} placeholder={'...'} />
         <Disqus config={disqusConfig} />
       </Layout>
     )
