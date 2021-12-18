@@ -1,5 +1,5 @@
 ---
-title: Tuning the CGAN model in book GANs in Action
+title: Tuning the CGAN model from book GANs in Action
 date: 2021-12-18 19:10:28
 ---
 
