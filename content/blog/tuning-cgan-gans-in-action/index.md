@@ -39,7 +39,31 @@ def build_discriminator(img_shape):
     return model
 ```
 
-I found I could improve result only if I remove those two layers.
+I found I could improve result only if I remove those two layers. The reason might be the two
+`BatchNormalization` layers make the discriminator too powerful for the generator, which makes
+improvement of generator impossible. This can be proved by the following loss graphs.
+
+This is the loss graph without the above `BatchNormalization` layers:
+![Loss Without BN](./loss_without_bn.png)
+
+Loss graph *with* the above `BatchNormalization` layers:
+![Loss With BN](./loss_with_bn.png)
+
+The initial loss values are too large, which causes the trend looks not clear in the above graph.
+After removing the big values in the front we can see the generator loss is increasing:  
+
+<div style = "display: flex; justify-content: center;">
+  <div style = "width: 50%; 
+  margin: 0 1rem;
+    margin-bottom : 1.5rem;">
+      <img style = "display: inline-block" src = "./d_loss_with_bn.png" />
+  </div>
+  <div style = "width: 50%; 
+  margin: 0 1rem;
+    margin-bottom : 1.5rem;">
+      <img style = "display: inline-block" src = "./g_loss_with_bn.png" />
+  </div>
+</div>
 
 ## Concatenate noise and label
 
