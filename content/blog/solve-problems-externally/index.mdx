@@ -1,0 +1,28 @@
+---
+title: Learn solving problems externally for introverts
+date: 2023-01-08 22:10:28
+description: How to solve problems externally.
+---
+
+![Many ways](./manyways.jpg)
+
+Most advice on problem-solving is about, well, solving problems. For example, my favorite one is about the design process from Jon Bentley’s _Programming Pearls_:
+
+> Work on the right problem.  
+> Explore the design space of solutions.  
+> Look at the data.  
+> Use the back of the envelope.  
+> Exploit symmetry.  
+> Design with components.  
+> Build prototypes.  
+> Make tradeoffs when you have to.  
+> Keep it simple.  
+> Strive for elegance.
+
+This is how we introverts solve problems. Sometimes we have no choice but to solve a problem from scratch. **Other times, a better solution can be found externally**, this is usually an extrovert’s thought pattern.
+
+For example, if we need to integrate with an external system that sends out data through a raw TCP connection. As introvert problem solvers, we instinctively ponder on “what technology should we use to solve this?”, “Java NIO or Netty?” , “What are the pros and cons of these technologies?” Even though we manage to implement this, the cost of dev time and maintenance could not be low.
+
+An extrovert’s thought maybe along the lines of “Why do they provide this raw protocol?”, “Do they have other alternative protocols?”, “Can we negotiate with the other company to provide higher-level protocols like MQTT or AMQP?” Obviously, problems can be solved effectively this way.
+
+Other than accepting and solving a problem right away, we often can ask for resources or negotiate a better alternative solution. As Tom Duff said, “Whenever possible, steal code”, if that doesn’t work, we know it’s time to follow Jon Bentley’s advice.
